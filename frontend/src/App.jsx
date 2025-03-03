@@ -1,9 +1,8 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import CreatePage from "./pages/CreatePage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import { useColorModeValue } from "@chakra-ui/react";
 function App() {
   return (
     <>
@@ -11,8 +10,8 @@ function App() {
         <Navbar />
         <Flex justify="center" w="full">
           <Routes>
-            <Route path="/" element={<CreatePage />} />
-            <Route path="/create" element={<HomePage />} />
+            <Route path="/create" element={<CreatePage />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </Flex>
       </Box>
